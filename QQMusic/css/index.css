@@ -1,0 +1,82 @@
+:root {
+    --overflow-color : #010101;
+    --base-color : #1f2023;
+    --surface-color : #27292D;
+    --overlay-dark-color : #2d2f34;
+    --overlay-light-color: #383b40;
+    --active-color: #9d3030;
+    --text-shadow-color : rgba(0, 0, 0, .75);
+    --font-color: white;
+    --header-height: 56px;
+    --aside-width: 240px;
+    --shadow-value : rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    --tip-error-bg-color:rgb(179, 45, 45);
+    --tip-success-bg-color: rgb(36, 133, 36);
+    --tip-warning-bg-color: rgb(198, 198, 84);
+     font-size : calc(0.9rem);
+     
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900'); 
+@font-face {
+    font-family: 'QingKe';
+    src: url(../font/ZCOOLQingKeHuangYou-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Prompt';
+    src: url(../font/Prompt-Regular.ttf);
+
+}
+@font-face {
+    font-family: 'KiwiMaru';
+    src: url(../font/KiwiMaru-Regular.ttf);
+}
+@font-face {
+    font-family: 'RobotoMono';
+    src: url(../font/RobotoMono-Regular.ttf);
+}
+@font-face {
+    font-family: 'ZenDots';
+    src: url(../font/ZenDots-Regular.ttf);
+}
+@font-face {
+    font-family: 'RocknRollOne';
+    src: url(../font/RocknRollOne-Regular.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*字体设置*/
+    color: var(--font-color);
+    font-family: 'Poppins';
+    transition-property: background-color;
+    transition-duration: 0.6s;
+    
+}
+
+body {
+    min-width: 1360px;
+    height: 100vh;
+    min-height: 560px;
+    display: grid;
+    position: relative;
+    grid-template-rows: var(--header-height) calc(var(--header-height) + 20px) 1fr;
+    grid-template-columns: var(--aside-width) 1fr;
+}
+
+::-webkit-scrollbar {
+    width: .3em;
+    height: .3em;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--overflow-color);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 1.5em;
+    -webkit-box-shadow: 0 0 .1em rgba(0, 0, 0, .3);
+    background-color: var(--overlay-light-color);
+}
+

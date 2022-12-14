@@ -1,0 +1,22 @@
+nav {
+    grid-column: 2 / 3;
+    grid-row : 2 / 3;
+    background-color: var(--overlay-dark-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+nav span {
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    margin: 0 1em;
+    background-color: var(--base-color);
+    border-radius: 1em;
+    box-shadow: var(--shadow-value);
+}
+
+nav span:hover {
+    background-color: var(--active-color);
+}

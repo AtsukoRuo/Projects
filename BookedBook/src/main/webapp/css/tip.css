@@ -1,0 +1,36 @@
+.widget-tip {
+    padding: 0.5em 3em;
+    visibility: hidden;
+    position: fixed;
+    top : 4em;
+    left : 50%;
+    visibility: visible;
+    opacity: 1;
+    border-radius: 2em;
+    font-weight: 600;
+    transform: translate(-50%, 0);
+    transition-property: opacity, visibility, transform;
+    transition-duration: 500ms;
+}
+
+.widget-tip-removed {
+    transform: translate(-50%, -20px);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.widget-tip-error {
+    background-color: rgb(187, 73, 73);
+    color : rgb(71, 33, 33);
+}
+
+.widget-tip-success {
+    background-color: rgb(6, 146, 6);
+    color : rgb(71, 33, 33);
+}
+
+.widget-tip-warning {
+    background-color: rgb(146, 146, 26);
+    color : rgb(71, 33, 33);
+}
+

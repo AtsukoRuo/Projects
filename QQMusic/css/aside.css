@@ -1,0 +1,44 @@
+aside {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    overflow: scroll;
+    background-color: var(--overlay-dark-color);
+}
+
+section {
+    width : auto;
+    margin: 1.2em 1em;
+    
+}
+
+.section-title {
+    font-size: 0.8em;
+}
+
+.section-content {
+    margin: 0.8em 0.2em;
+    padding: 0.8em 1em;
+    background-color: var(--base-color);
+    border-radius: 1em;
+    box-shadow: var(--shadow-value);
+}
+
+.section-content-item + .section-content-item {
+    margin : 1em 0em 0 0em;
+} 
+.section-content-item {
+    display: flex;
+    align-items: center;
+    height: 1.8em;
+    padding-left : 0.7em;
+    border-radius: 1em;
+}
+
+.section-content-item svg {
+    width : 1.5em;
+    height: 1.5em;
+    margin-right : 0.7em;
+}
+.section-content-item:hover {
+    background-color: var(--active-color);
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.BookedBook.DAO.BorrowingMapper">
+    <select id="getBorrowingRecordByName" resultType="com.BookedBook.POJO.BorrowingRecord">
+        select * from borrowing where name = #{name};
+    </select>
+    <select id="getBorrowingRecordByBookId" resultType="com.BookedBook.POJO.BorrowingRecord">
+        select * from borrowing where book_id=#{book_id};
+    </select>
+
+    <update id="updateBorrowingRecord" parameterType="com.BookedBook.POJO.BorrowingRecord">
+        update borrowing SET
+            time_back = #{time_back},
+            status_back = #{status_back},
+            info = #{info}
+            where student_id=#{student_id} and book_id=#{book_id};
+    </update>
+
+    <insert id="insertBorrowingRecord" parameterType="com.BookedBook.POJO.BorrowingRecord" useGeneratedKeys="true" keyProperty="id">
+        insert into borrowing(book_id, name, student_id, contact, time_out)
+        VALUES(#{book_id}, #{name}, #{student_id}, #{contact}, #{time_out});
+    </insert>
+</mapper>
+

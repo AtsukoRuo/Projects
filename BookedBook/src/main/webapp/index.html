@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书馆借阅管理系统</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/config.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/tip.css" />
+    <link rel="stylesheet" href="css/form.css" />
+
+</head>
+
+<body>
+    <main>
+        <h2 class="main-item">Management System of Borrowing Books</h2>
+
+        <div class="search-box main-item">
+
+            <div class="search-item-wrapper">
+                <input class="search-input" type="text" maxlength="100" placeholder="Type the name you want to search">
+                <div class="search-btn">
+                    <img src="figure/搜索.png" />
+                </div>
+
+            </div>
+
+            <div class="search-result-wrapper" style="display:none;">
+                <div class="search-result-item">
+                    <span >title</span>
+                    <span >checked out</span>
+                    <span >checked in</span>
+                    <span >status</span>
+                    <span >note</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="books-box main-item">
+            <div class="books-container">
+                <div class="book-item book-operation-add">
+                    <div class="book-item-info">
+                        <img src="figure/加号.png" width />
+                        <span>Add Book</span>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+
+    <div class="form-wrapper form-isRemoved" id="form-borrow">
+        <div class="form-container">
+            <h2>Fill out a Form</h2>
+            <div class="form-input">
+                <div>Name</div>
+                <input type="text" name="name"/>
+            </div>
+
+            <div class="form-input">
+                <div>Student Id</div>
+                <input type="text" name="student_id"/>
+            </div>
+
+            <div class="form-input">
+                <div>Contact</div>
+                <input type="text" name="contact"/>
+            </div>
+
+            <div class="btn-box">
+                <div class="button" id="btn-borrow">Borrow</div>
+                <div class="button btn-cancel">Cancel</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-wrapper form-isRemoved" id="form-add">
+        <div class="form-container">
+            <h2>Add Book</h2>
+            <div class="form-input">
+                <div>Title</div>
+                <input type="text" name="title"/>
+            </div>
+            <div class="form-input">
+                <div>Time Issue</div>
+                <input type="text" name="time_issue" date-inputType="time"/>
+            </div>
+            <div class="form-input">
+                <div>Word</div>
+                <input type="text" name="num_word"/>
+            </div>
+            <div class="form-input">
+                <div>Price</div>
+                <input type="text" name="price"/>
+            </div>
+            <div class="form-input">
+                <div>Status</div>
+                <input type="text" name="status"/>
+            </div>
+            <div class="form-input">
+                <div>Author</div>
+                <input type="text" name="author"/>
+            </div>
+            <div class="btn-box">
+                <div class="button" id="btn-add">Add</div>
+                <div class="button btn-cancel">Cancel</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-wrapper form-isRemoved" id="form-return">
+        <div class="form-container">
+            <h2>Return</h2>
+            <div class="form-input" >
+                <div>Student ID:</div>
+                <input type="text" name="student_id"/>
+            </div>
+            <div class="form-input">
+                <div>Status</div>
+                <input type="text" name="status"/>
+            </div>
+            <div class="form-input">
+                <div>Note</div>
+                <input type="text" name="note"/>
+            </div>
+            <div class="btn-box">
+                <div class="button" id="btn-return">Return</div>
+                <div class="button btn-cancel">Cancel</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-wrapper form-isRemoved" id="form-info" style="width:1080px">
+        <div class="form-info-container">
+            <div class="form-close">❌</div>
+            <h2>infomation</h2>
+            <div class="form-info-items-wrapper">
+                
+            </div>
+            <h2>Borrowing Records</h2>
+            
+            <div class="form-info-records-wrapper">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="form-wrapper" id="form-warning" style="width: 860px;">
+        <div class="form-container" style="width: 860px;">
+            <ul>
+                <li>假设书籍有任意多本</li>
+                <li>前十个书籍不要修改删除，那是我精心挑选的🤯，可以自己添加书籍进行测试</li>
+                <li>因为没有表单校验，所以要保证输入是合法的 😥 而且日期必须符合格式YYYY-MM-DD</li>
+                <li>而且后端没做存在校验，所以确保输入是在数据库中存在的😣</li>
+                <li>推荐使用英文，因为使用了好看的Poppins字体，但是它不支持中文。<del>绝对不是想偷懒不解决乱码问题 :)</li>
+            </ul>
+            <img src="figure/gif.webp" />
+            <div class="btn-box">
+                <div class="button" id="btn-warning">我已知晓🥰</div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="form-wrapper form-isRemoved" id="form-delete">
+        <div class="form-container">
+            <h2>Delete this Book ?</h2>
+            <div class="btn-box">
+                <div class="button" id="btn-delete">Yes</div>
+                <div class="button btn-cancel">No</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-wrapper form-isRemoved" id="form-update">
+        
+        <div class="form-container">
+            <h2>Update</h2>
+            <div class="form-input">
+                <div>Title</div>
+                <input type="text" name="title"/>
+            </div>
+            <div class="form-input">
+                <div>Time Issue</div>
+                <input type="text" name="time_issue"/>
+            </div>
+            <div class="form-input">
+                <div>Word</div>
+                <input type="text" name="num_word"/>
+            </div>
+            <div class="form-input">
+                <div>Price</div>
+                <input type="text" name="price"/>
+            </div>
+            <div class="form-input">
+                <div>Status</div>
+                <input type="text" name="status"/>
+            </div>
+            <div class="form-input">
+                <div>Author</div>
+                <input type="text" name="author"/>
+            </div>
+            <div class="btn-box">
+                <div class="button" id="btn-update">Update</div>
+                <div class="button btn-cancel">Cancel</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="frontground frontground-isRemoved"></div>
+
+    <script type="text/javascript" src="js/search.js"> </script>
+    <script type="text/javascript" src="js/book.js"> </script>
+    <script type="text/javascript" src="js/util.js"> </script>
+
+</body>
+
+</html>

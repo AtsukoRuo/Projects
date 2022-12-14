@@ -1,0 +1,225 @@
+header {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    padding: 0 16px;
+    background-color: var(--base-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+/*一级flex item*/
+.header-logo {
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-wrapper {
+    width: 400px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-search {
+    width: 720px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*logo*/
+.header-logo svg {
+    flex-basis: 15%;
+    margin-left: .5em;
+}
+
+.header-logo span {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-left: 0.5em;
+    flex-grow: 1;
+}
+
+/*账户设置*/
+.header-account {
+    width : 175px;
+    padding: 0 .8em;
+    position: relative;
+}
+
+.header-account:hover,
+.header-time:hover,
+.header-notification:hover {
+    background-color: var(--overlay-light-color);
+}
+
+.header-account-info {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-account-info img {
+    width : 40px;
+    height: 40px;
+    display: block;
+    border-radius: 10px;
+    margin-left : 1em;
+}
+.header-account-info span {
+    font-size: 1.1em;
+}
+
+.header-time {
+    padding : 0 .8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-notification {
+    padding : 0 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.header-account-card,
+.header-account-login,
+.header-account-loading {
+    width : 350px;
+    height : 300px;
+    background-color: red;
+    overflow: auto;
+    position: absolute;
+    left : -50%;
+    top: var(--header-height);
+}
+.header-account-card {
+    display: flex;
+
+}
+
+
+
+/*搜索 已完成*/
+.search-container {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: var(--surface-color);
+}
+
+.search-box {
+    width: 600px;
+    height: 40px;
+    margin: 0 5em;
+}
+
+.search-input {
+    height: 40px;
+    flex-grow: 11;
+    background-color: transparent;
+    border: none;
+    font-weight: 700;
+    font-size: 1em;
+    padding: 0 0.8em;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.search-btn {
+    padding: 0 15px;
+    width: 50px;
+    height: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    align-items: center;
+    background-color: var(--overlay-light-color);
+}
+
+.search-panel {
+    padding: 1em 1em;
+    overflow-y: auto;
+    width: 100%;
+    background-color: var(--surface-color);
+    position: relative;
+    top : 1em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, 0px);
+    transition-property: opacity, visibility, transform;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in;
+    z-index : 100;
+}
+
+.search-panel-removed {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(0, -200px);
+}
+
+.search-panel h3 {
+    height: 24px;
+    font-size: 16px;
+    line-height: 24px;
+}
+.search-panel-history {
+    max-height: min-content;
+    width : 100%;
+    margin: 0.5em 0em;
+}
+.search-panel-history span {
+    display: inline-block;
+    padding: 0 1em;
+    margin:  .4em;
+    padding : 0 8px;
+    line-height: 2em;
+    background-color: var(--base-color);
+    border-radius: 4px;
+}
+
+.search-panel-recommend {
+    margin: 0.5em 0;
+    width : 100%;
+    height: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.search-panel-recommend div {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space : nowrap;
+    text-overflow: clip;
+    padding : 0 1em 0 0;
+    border-radius: 8px;
+    margin : 0 2em 0 0;
+}
+.search-panel-recommend div:hover {
+    background-color: var(--active-color);
+}
+.search-panel-title {
+    display: flex;
+    justify-content: space-between;
+}
+.search-panel-title span {
+    font-size: 14px;
+}
+
+
